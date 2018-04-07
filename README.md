@@ -7,7 +7,7 @@ Using Software Designed Radio (SDR) to transmit OFDM 16 QAM signals at 5 GHz.
 
 Transmitter and Receiver hardware : Zedboard (Xilinx Zynq®-7000) + AD9361 (Analog Device-FMCOMMS3)
 
-![Hardware](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/Hardware.jpg)
+![Hardware](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/Hardware.jpg)
 
 # Software needed :
 
@@ -38,20 +38,20 @@ Please open multiple Matlab windows to run `Hardware_TX.m` and `Hardware_RX.m` r
 # GUI :
 * GUI_TX
 
-![Program GUI_TX](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/GUI_TX.png)
+![Program GUI_TX](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/GUI_TX.png)
 
 * GUI_RX
 
-![Program GUI_RX](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/GUI_RX.png)
+![Program GUI_RX](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/GUI_RX.png)
 
 Video Demo : https://www.youtube.com/watch?v=oiXrjycoLfE
-![Program GUI gif](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/GUI_gif.gif)
+![Program GUI gif](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/GUI_gif.gif)
 
 # System Model :
 
 ## OFDM Block Diagram
 
-<img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/OFDM_Block_Diagram.png" width="800">
+<img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/OFDM_Block_Diagram.png" width="800">
 
 ## Code Function :
 
@@ -72,19 +72,19 @@ Video Demo : https://www.youtube.com/watch?v=oiXrjycoLfE
 * Frame check calculation (It assumes every packet is the same length)
 
 ## TX System Model
-<img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/TX%20System%20Model.png" width="500">
+<img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/TX%20System%20Model.png" width="500">
 
 > * Short Preamble
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/TX%20System%20Model_Short%20Preamble.png" width="800">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/TX%20System%20Model_Short%20Preamble.png" width="800">
 
 > * Long Preamble
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/TX%20System%20Model_Long%20Preamble.png" width="800">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/TX%20System%20Model_Long%20Preamble.png" width="800">
 
 > * Payload
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/TX%20System%20Model_Payload.png" width="600">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/TX%20System%20Model_Payload.png" width="600">
 
 > * TX signal
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/TX%20System%20Model_Final.png" width="700">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/TX%20System%20Model_Final.png" width="700">
 
 ## TX RX Hardware Parameters
 | Center Frequency                 | 5 GHz                            |
@@ -113,25 +113,25 @@ ip link set dev eth0 up
 
 Then, use router DHCP hand setting mode to distribute network configuration parameters :
 
-![Router setting](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/Router%20setting.PNG)
+![Router setting](https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/Router%20setting.PNG)
 
 ## RX System Model
-<img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model.png" width="300">
+<img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model.png" width="300">
 
 > * "Delay and Correlate" algorithm for Packet Detection
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model_Delay%20and%20Correlate%20algorithm.png" width="500">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model_Delay%20and%20Correlate%20algorithm.png" width="500">
 
 > * Packet Detection (normal case) , Threshold=0.75
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model_Packet%20Detection.png" width="600">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model_Packet%20Detection.png" width="600">
 
 > * Packet Detection (problem case & deselect the imperfect packet)
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model_Packet%20Detection(problem).png" width="600">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model_Packet%20Detection(problem).png" width="600">
 
 > * Coarse CFO Estimation & Compensation
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model_Coarse%20CFO%20Estimation.png" width="600">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model_Coarse%20CFO%20Estimation.png" width="600">
 
 > * Fine CFO Estimation & Compensation
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model_Fine%20CFO%20Estimation.png" width="600">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model_Fine%20CFO%20Estimation.png" width="600">
 
 > * Channel Estimation & Equalizer
-> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a/master/Picture/RX%20System%20Model_Channel%20Estimation%20%26%20Equalizer.png" width="600">
+> <img src="https://raw.githubusercontent.com/MeowLucian/SDR_Matlab_OFDM_802.11a_16QAM/master/Picture/RX%20System%20Model_Channel%20Estimation%20%26%20Equalizer.png" width="600">
